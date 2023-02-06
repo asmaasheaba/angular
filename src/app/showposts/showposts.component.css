@@ -1,3 +1,21 @@
-#ddiv{
+.ddiv{
+    margin-left: 10vw !important;
+}
+.div2{
+    width:  30% !important;
+}
+.div1{
+    width: 100% !important;
     margin: auto !important;
+}
+
+.green{
+     color: green;
+}
+.geay{
+    color: gray;
+}
+
+.hedd{
+    display: none !important;
 }

@@ -12,4 +12,6 @@ export class ShowpostsComponent {
 
  //public posts : Post[] = postsData ;
   constructor(){}
+  
 }
+

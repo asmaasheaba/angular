@@ -1,22 +1,31 @@
 
-<div id="ddiv" class="container">
-  <div class=" row ">
+<div class="container ddiv">
+  <div class=" row div1">
 
-    <div class=" col-4 m-3 " style="width: 18rem;" *ngFor="let post of posts">
-      <img src="../../assets/images/33.jpg" class="card-img-top" alt="...">
+    <div class=" col-4 m-3 card div2"  *ngFor="let post of posts">
+      <img src="{{post.image}}" class="card-img-top" alt="...">
       <div class="card-body" >
         <h5 class="card-title">{{post.title}}</h5>
+        <br>
         <p class="card-text">{{post.content}}</p>
-        <p class="card-text">At : {{post.createdAt}}</p>
-        <p class="card-text"> Likes : {{post.likes}}</p>
-        <p class="card-text">By : {{post.creator.name}}</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <span class="card-text">At : {{post.createdAt}}</span>
+        <br>
+        <span class="card-text  "> Likes : {{post.likes}}</span>
+        <span class="card-text m-4  "> Followers : {{post.creator.followers}}</span>
+        <br>
+        <p class="card-text">By : {{post.creator.name}}
+        <span [ngClass]="post.creator.isOnline? 'green' : 'gray'"><i class="fa-solid fa-circle "></i></span></p>
+        
+      
+    
+          <button class="btn btn-primary mx-3"> {{post.creator.isFollowing? " Un Follow" : "follow"}}</button>
+
+        
       </div>
     </div>
 
 
 
   </div>
-
 
 </div>
